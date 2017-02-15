@@ -154,7 +154,8 @@ class AspectJWeaver {
         if (lf.exists()) {
             lf.readLines().reverseEach { String line ->
                 if (line.contains("[error]") && breakOnError) {
-                    throw new GradleException(String.format(errorReminder, logFile));
+                    System.err.println line
+                    throw new GradleException(line + "\n" + String.format(errorReminder, logFile));
                 }
             }
         }
