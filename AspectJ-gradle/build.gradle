@@ -5,7 +5,7 @@ targetCompatibility = JavaVersion.VERSION_1_6
 sourceCompatibility = JavaVersion.VERSION_1_6
 
 project.ext {
-    aspectjVersion = '1.8.9'
+    aspectjVersion = '1.8.10'
 }
 
 dependencies {

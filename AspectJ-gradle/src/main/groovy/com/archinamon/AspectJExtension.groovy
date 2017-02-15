@@ -2,7 +2,7 @@ package com.archinamon
 
 public class AspectJExtension {
 
-    def String ajc = "1.8.9";
+    def String ajc = "1.8.10";
 
     List<String> includeJar = new ArrayList<String>();
     List<String> includeAspectsFromJar = new ArrayList<String>();
