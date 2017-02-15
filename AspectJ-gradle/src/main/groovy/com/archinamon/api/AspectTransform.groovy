@@ -142,6 +142,11 @@ class AspectTransform extends Transform {
         aspectJWeaver.destinationDir = outputDir.absolutePath;
         aspectJWeaver.bootClasspath = config.bootClasspath.join(File.pathSeparator);
 
+        // clear weaver input, so each transformation can have its own configuration
+        // (e.g. different build types / variants)
+        aspectJWeaver.inPath.clear()
+        aspectJWeaver.aspectPath.clear()
+
         logAugmentationStart();
 
         transformInvocation.referencedInputs.each { input ->
